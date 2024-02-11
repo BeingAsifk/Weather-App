@@ -1,0 +1,206 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  background: var(--color-dark);
+  height: 100vh;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.widget {
+  display: flex;
+  height: 400px;
+  width: 650px;
+  flex-wrap: wrap;
+  cursor: pointer;
+
+  border-radius: 20px;
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3),
+    0 17px 17px 0 rgba(0, 0, 0, 0.15);
+}
+.widget .weatherIcon {
+  flex: 1 100%;
+  height: 50%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background: #e8eeee;
+  font-family: weathericons;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 100px;
+}
+
+.widget .weatherInfo {
+  flex: 0 0 70%;
+  height: 40%;
+  background: #f3cec7;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.widget .weatherInfo .temperature {
+  flex: 0 0 40%;
+  width: 100%;
+  font-size: 65px;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 20px;
+}
+.widget .weatherInfo .description {
+  flex: 0 60%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+.widget .weatherInfo .description .weatherCondition {
+  text-transform: uppercase;
+  font-size: 35px;
+  font-weight: 100;
+}
+.widget .weatherInfo .description .place {
+  font-size: 15px;
+}
+.widget .date {
+  flex: 0 0 30%;
+  height: 40%;
+  background: #8fbc90;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.widget .extra-temp {
+  flex: 1 100%;
+  padding: 5% 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: #dda75e;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  font-size: 100px;
+}
+
+.widget .extra-temp p {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.temp-info-minmax,
+.weather-extra-info,
+.two-sided-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  align-items: center;
+  color: white;
+}
+
+.widget .extra-temp .extra-info-leftside {
+  text-align: left;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: white;
+  font-size: 15px;
+}
+
+/* input search button style  */
+
+/* .search-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+} */
+
+.searchTerm {
+  width: 50%;
+  border: none;
+  padding: 16px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  font-size: 18px;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+/*  */
+
+.search-container {
+  background: #fff;
+  height: 50px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.8s;
+
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.search-container:hover > .search-input {
+  width: 400px;
+}
+
+.search-container .search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 0px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.8s;
+}
+.search-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+​ @keyframes hoverShake {
+  0% {
+    transform: skew(0deg, 0deg);
+  }
+  25% {
+    transform: skew(5deg, 5deg);
+  }
+  75% {
+    transform: skew(-5deg, -5deg);
+  }
+  100% {
+    transform: skew(0deg, 0deg);
+  }
+}
+
+.search-container:hover {
+  animation: hoverShake 0.15s linear 3;
+}
