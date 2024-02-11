@@ -3,7 +3,7 @@ import "../components/style.css";
 import WeatherDetails from "./WeatherDetails";
 
 function SearchMain() {
-  const [searchTerm, setSearchTerm] = useState("delhi");
+  const [searchTerm, setSearchTerm] = useState("Delhi");
   const [tempInfo, setTempInfo] = useState({});
 
   const getWeatherInfo = async () => {
@@ -47,7 +47,7 @@ function SearchMain() {
           <input
             className="search-input"
             type="search"
-            placeholder="type city name..."
+            placeholder="Type city name..."
             id="search"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
