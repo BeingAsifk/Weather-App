@@ -3,7 +3,7 @@ import "../components/style.css";
 import WeatherDetails from "./WeatherDetails";
 
 function SearchMain() {
-  const [searchTerm, setSearchTerm] = useState("Delhi");
+  const [searchTerm, setSearchTerm] = useState("");
   const [tempInfo, setTempInfo] = useState({});
 
   const getWeatherInfo = async () => {
